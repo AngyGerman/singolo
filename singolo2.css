@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('assets/fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('assets/fonts/Lato-Black.ttf') format('truetype');
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3, p {
+    margin: 0;
+    color: #666d89;
+}
+
+.box {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.portfolio {
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+    margin: 0 auto;
+    padding: 70px 0 0 40px;
+}
+
+.portfolio h2 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.portfolio p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+button {
+    font-weight: 400;
+    background-color: inherit;
+    border-radius: 4px;
+    border: 1px solid #666d89;
+    color: #666d89;
+    padding-right: 8px;
+    margin: 0 5px 19px 0;
+    height: 22px;
+    font-size: 12px;
+}
+
+button:hover {
+    border: 1px solid #C5C5C5;
+    color: #C5C5C5;
+}
+
+.gallery {
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+
+.gallery img {
+    padding-right: 20px;
+}
+
+.row {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.about {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 68px 0 0 40px;
+}
+
+.about  h2 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 18px;
+    padding-bottom: 25px;
+}
+
+.about p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 47px;
+    letter-spacing: 0.084pt;
+}
+
+.layout-3-column {
+    display: flex;
+}
+
+.person {
+    position: relative;
+}
+
+.second-person {
+    right: -18px;
+}
+
+.last-person {
+    left: 15px;
+}
+
+.person .photo {
+    padding-right: 24px;
+}
+
+.person-info h3 {
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 18px;
+    padding-top: 13px;
+    padding-bottom: 9px;
+    letter-spacing: 0.3pt;
+}
+
+.person-info p {
+    font-weight: 400;
+    padding-bottom: 0;
+    font-size: 12px;
+    line-height: 22px;
+    width: 301px;
+    letter-spacing: -0.05pt;
+}
+
+.social-media {
+    padding: 23px 0 67px 0;
+}
+
+.social-media img {
+    padding-right: 5px;
+    opacity: 1;
+}
+
+.social-media img:hover {
+    opacity: .7;
+    cursor: pointer;
+}
