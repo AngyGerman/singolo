@@ -8,32 +8,43 @@
 <body>
     <div class="box">
         <header>
-            <div class="container">
+            <div class="container" id="container">
                 <div class="logo">
                     <h1>Singolo<span>*</span></h1>
                 </div>
                 <nav class="menu">
                     <ul class="menu-link">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#slider" class="menu-selected">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <div class="slider">
-            <div class="arrows arrow-left">
+        <div class="slider" id="slider">
+            <div class="btn-horizontal" onclick="horizontalPhoneButton()"></div>
+            <div class="btn-vertical" onclick="verticalPhoneButton()"></div>
+
+            <div id="black"></div>
+            <div id="black1"></div>
+
+            <div class="arrows arrow-left prev">
                 <a href="#"><img src="assets/img/arrow.png" alt=""></a>
             </div>
-            <div class="arrows arrow-right">
+            <div class="arrows arrow-right next">
                 <a href="#"><img src="assets/img/arrow.png" alt=""></a>
+            </div>
+
+            <div class="slides">
+                <img class="slide active visible" src="assets/img/slide-1.jpg">
+                <img class="slide" src="assets/img/slide-2.jpg">
             </div>
         </div>
 
-        <div class="services">
+        <div class="services" id="services">
             <div class="services-info">
                 <h2>Our Services</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -104,39 +115,35 @@
             </div>
         </div>
 
-        <section class="portfolio">
+        <div class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <div class="portfolio-tags">
                 <button class="tag tag-selected">All</button>
-                <button class="tag">Web Design</button>
-                <button class="tag">Graphic Design</button>
-                <button class="tag">Artwork</button>
+                <button class="tag" data-mix-class="flex1">Web Design</button>
+                <button class="tag" data-mix-class="flex2">Graphic Design</button>
+                <button class="tag" data-mix-class="flex3">Artwork</button>
             </div>
 
-            <div class="gallery">
-                <div class="row">
+            <div class="gallery" id="gallery">
+                <div id="tag-box">
                     <img src="assets/img/1.jpg">
                     <img src="assets/img/2.jpg">
                     <img src="assets/img/3.jpg">
                     <img src="assets/img/4.jpg">
-                </div>
-                <div class="row">
                     <img src="assets/img/5.jpg">
                     <img src="assets/img/6.jpg">
                     <img src="assets/img/7.jpg">
                     <img src="assets/img/8.jpg">
-                </div>
-                <div class="row">
                     <img src="assets/img/9.jpg">
                     <img src="assets/img/10.jpg">
                     <img src="assets/img/11.jpg">
                     <img src="assets/img/12.jpg">
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="about">
+        <div class="about" id="about">
             <h2>About Us</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 
@@ -183,20 +190,29 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="quote">
+        <div class="quote" id="contact">
             <h2>Get a Quote</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="flex-box">
-                <form action="#" method="get">
+                <form action="#" method="get" name="form" id="form" onsubmit="feedbackFormSubmit(); return false;">
                     <input id="name" type="text" name="name" placeholder="Name (Required)" required><br>
                     <input id="email" type="email" name="email" placeholder="Email (Required)" required><br>
                     <input id="subject" type="text" name="subject" placeholder="Subject"><br>
-                    <textarea name="text" placeholder="Describe your project in detail..."></textarea><br>
-                    <input type="submit" value="Submit">
+                    <textarea id="description" name="text" placeholder="Describe your project in detail..."></textarea><br>
+                    <input type="submit" id="btn-modal" value="Submit">
                 </form>
 
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <p id="sent">The letter was sent!</p>
+                        <div class="theme">Subject: <span id="your-theme"></span></div>
+                        <div class="description">Description: <span id="your-description"></span></div>
+                        <button class="close">Ok</button>
+                    </div>
+                </div>
+                <div class="bg" id="bg"></div>
                 <div class="contact-information">
                     <h4>Contact Information</h4>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
@@ -208,10 +224,10 @@
                     <a href="mailto:info@singolo.com">info@singolo.com</a>
                 </div>
             </div>
-        </section>
+        </div>
 
         <footer>
-            <p>© Copyright 2013</p>
+            <p>&copy; Copyright 2013</p>
             <div class="social-media">
                 <img src="assets/img/facebook.png">
                 <img src="assets/img/google.png">
@@ -220,5 +236,6 @@
             </div>
         </footer>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
