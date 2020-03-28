@@ -235,6 +235,7 @@ burger.addEventListener('click', (e) => {
         link.addEventListener('click', (e) => {
             burger.classList.remove('burger-selected');
             mobileMenu.classList.remove('mobile-menu');
+            logo.classList.remove('logo-mobile');
             showMenu.classList.add('show');
         });
     });

@@ -106,7 +106,7 @@ ul {
     display: none;
 }
 
-.menu .menu-link li::after {
+.menu .menu-link li:after {
     content: "";
     display: inline-block;
     width: 2px;
@@ -873,8 +873,11 @@ footer img:last-child {
         line-height: 43.32pt;
     }
 
-    .menu-link a:after {
-        display: none;
+    .menu .menu-link li:after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
     }
 
     .burger {
@@ -882,7 +885,7 @@ footer img:last-child {
         position: absolute;
         padding-top: 13%;
         z-index: 21;
-        /*transition: 1s;*/
+        transition: 0.3s;
         transform: rotate(-90deg);
     }
 
