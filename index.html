@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Singolo</title>
 </head>
 <body>
     <div class="box">
         <header>
+            <div id="mobile-menu"></div>
             <div class="container" id="container">
-                <div class="logo">
+                <div class="logo" id="logo">
                     <h1>Singolo<span>*</span></h1>
                 </div>
-                <nav class="menu">
+                <div class="burger" id="burger">
+                    <img src="assets/img/Burger-menu-icon.png" height="26" width="21"/>
+                </div>
+
+                <nav class="menu show" id="show-menu">
                     <ul class="menu-link">
                         <li><a href="#slider" class="menu-selected">Home</a></li>
                         <li><a href="#services">Services</a></li>
@@ -80,9 +86,7 @@
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="advantages-line2">
                 <div class="advantages">
                     <div class="advantages-icon">
                         <img src="assets/img/phone.png">
@@ -126,7 +130,7 @@
             </div>
 
             <div class="gallery" id="gallery">
-                <div id="tag-box">
+                <div id="tag-box" class="tag-box">
                     <img src="assets/img/1.jpg">
                     <img src="assets/img/2.jpg">
                     <img src="assets/img/3.jpg">
@@ -152,7 +156,7 @@
                     <img src="assets/img/adame.jpg">
                     <div class="person-info">
                         <h3>Adam Jensen</h3>
-                        <p>Quisque luctus, quam eget molestie commodo, lacus purus<br> cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
                     <div class="social-media">
                         <img src="assets/img/facebook.png">
@@ -166,7 +170,7 @@
                     <img class="photo" src="assets/img/desmond.jpg">
                     <div class="person-info">
                         <h3>Desmond Miles</h3>
-                        <p>Curabitur vestibulum eget mauris quis laoreet.Phasellus<br> in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                        <p>Curabitur vestibulum eget mauris quis laoreet.Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     </div>
                     <div class="social-media">
                         <img src="assets/img/facebook.png">
@@ -180,7 +184,7 @@
                     <img src="assets/img/scolara.jpg">
                     <div class="person-info">
                         <h3>Scolara Visari</h3>
-                        <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet<br> turpis, et consequat felis. Quisque condimentum.</p>
+                        <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     </div>
                     <div class="social-media">
                         <img src="assets/img/facebook.png">
@@ -199,8 +203,8 @@
                 <form action="#" method="get" name="form" id="form" onsubmit="feedbackFormSubmit(); return false;">
                     <input id="name" type="text" name="name" placeholder="Name (Required)" required><br>
                     <input id="email" type="email" name="email" placeholder="Email (Required)" required><br>
-                    <input id="subject" type="text" name="subject" placeholder="Subject"><br>
-                    <textarea id="description" name="text" placeholder="Describe your project in detail..."></textarea><br>
+                    <input id="subject" type="text" name="subject" maxlength="40" placeholder="Subject"><br>
+                    <textarea id="description" name="text" maxlength="400" placeholder="Describe your project in detail..."></textarea><br>
                     <input type="submit" id="btn-modal" value="Submit">
                 </form>
 

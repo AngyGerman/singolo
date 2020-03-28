@@ -26,12 +26,16 @@
     src: url('assets/fonts/Lato-Black.ttf') format('truetype');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Lato, sans-serif;
     font-weight: 400;
     max-width: 1200px;
+    min-width: 320px;
     margin: 0 auto;
-    scroll-behavior: smooth;
 }
 
 .box {
@@ -69,6 +73,10 @@ header .container {
 
 .logo h1 span {
     color: #f06c64;
+}
+
+.burger {
+    display: none;
 }
 
 .menu {
@@ -164,11 +172,6 @@ ul {
     z-index: 1;
 }
 
-.slider {
-    position: relative;
-    margin-top: 91px;
-}
-
 .slider .arrows {
     position: absolute;
     width: 27px;
@@ -199,14 +202,17 @@ ul {
     transform: scale(-1, 1);
 }
 
-.slider .slides {
-    overflow: hidden;
+.slider {
     position: relative;
-    height: 600px;
+    overflow: hidden;
+    margin-top: 91px;
+}
+
+.slider .slides {
+    position: relative;
 }
 
 .slider .slides img {
-    position: absolute;
     display: none;
     opacity: 0;
     left: 100px;
@@ -218,6 +224,7 @@ ul {
 }
 
 .slider .slides img.visible {
+    position: relative;
     opacity: 1;
     left: 0;
 }
@@ -257,23 +264,21 @@ ul {
 
 .advantages-line {
     display: flex;
-    margin-bottom: 17px;
-}
-
-.advantages-line2 {
-    display: flex;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+    margin-right: 10px;
 }
 
 .advantages {
     display: flex;
-    width: 100%;
-    margin-bottom: 10px;
+    width: 30%;
+    margin-bottom: 28px;
+    padding-right: 41px;
 }
 
-.advantages:nth-child(2),
-.advantages:nth-child(3) {
-    padding-left: 20px;
+.advantages:nth-child(3),
+.advantages:nth-child(6){
+    padding-right: 0;
 }
 
 .advantages-icon {
@@ -296,6 +301,8 @@ ul {
 }
 
 .advantages-info p {
+    width: 222px;
+    text-align: justify;
     color: #767e9e;
     font-size: 8.5pt;
     line-height: 16.6pt;
@@ -489,6 +496,10 @@ input, textarea {
     padding-left: 15px;
     margin: 0 0 16px 39px;
 }
+.modal-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 input::placeholder, textarea::placeholder {
     color: #F48C8F;
@@ -621,4 +632,528 @@ footer img {
 
 footer img:last-child {
     padding-right: 41px;
+}
+
+@media (max-width: 1019px) and (min-width: 768px) {
+
+    .box {
+        width: 100%;
+        min-width: 768px;
+        max-width: 1019px;
+    }
+
+    header .container {
+        width: 100%;
+        max-width: 1019px;
+        min-width: 768px;
+    }
+
+    .slider,
+    .slides, .slides img {
+        max-width: 1019px;
+        min-width: 768px;
+        max-height: 599px;
+        min-height: 452px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider .arrow-left {
+        top: 48%;
+        left: 4%;
+    }
+
+    .slider .arrow-right {
+        right: 3%;
+        top: 48%;
+    }
+
+    .btn-horizontal {
+        top: 197px;
+        left: 323px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn-vertical {
+        top: 348px;
+        left: 146px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .black {
+        top: 91px;
+        left: 93px;
+        height: 253px;
+        width: 143px;
+    }
+
+    .black1 {
+        top: 143px;
+        right: 152px;
+        height: 143px;
+        width: 251px;
+    }
+
+    .services .services-info h2 {
+        padding-top: 51px;
+    }
+
+    .services .services-info p {
+        padding-bottom: 31px;
+        width: 670px;
+    }
+
+    .advantages {
+        display: flex;
+        width: 50%;
+        margin-bottom: 49px;
+        padding-right: 0;
+    }
+
+    .advantages-line {
+        margin-bottom: 16px;
+        margin-right: 19px;
+    }
+
+    .services {
+        padding-right: 0;
+    }
+
+    .gallery img {
+        margin-right: 19px;
+        margin-bottom: 22px;
+        width: 216px;
+        height: 183px;
+    }
+
+    .gallery {
+        padding-bottom: 42px;
+    }
+
+    .tag-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button {
+        margin: 0 5px 27px 0;
+    }
+
+    .portfolio {
+        padding: 70px 0 0 31px;
+    }
+
+    .portfolio p {
+        font-size: 20px;
+        width: 670px;
+        margin: 0;
+    }
+
+    .about p {
+        padding-bottom: 37px;
+        width: 676px;
+    }
+
+    .person {
+        width: 30%;
+        padding-right: 15px;
+    }
+
+    .last-person,
+    .second-person {
+        padding-right: 0;
+        right: 0;
+    }
+
+    .person>img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .person-info h3 {
+        padding-top: 10px;
+        padding-bottom: 2px;
+    }
+
+    .person-info p {
+        font-size: 11px;
+        width: 200px;
+        padding-bottom: 0;
+    }
+
+    .layout-3-column .social-media {
+        padding: 10px 0 64px 0;
+    }
+
+    .quote h2 {
+        padding: 61px 0 22px 42px;
+    }
+
+    .quote p {
+        padding: 0 0 24px 42px;
+        width: 675px;
+    }
+
+    input, textarea {
+        width: 427px;
+        margin: 0 0 13px 39px;
+    }
+
+    textarea {
+        height: 147px;
+    }
+
+    .contact-information h4 {
+        padding: 0 0 3px 26px;
+    }
+
+    .contact-information img {
+        padding: 0 7px 0 26px;
+    }
+
+    .contact-information p {
+        width: 240px;
+        font-size: 13px;
+        padding: 0 0 7px 25px;
+    }
+
+    input[type=submit] {
+        width: 137px;
+        height: 38px;
+        margin-bottom: 39px;
+    }
+
+    .bg {
+        min-width: 768px;
+        height: 3699px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .box {
+        width: 100%;
+        min-width: 375px;
+        max-width: 767px;
+    }
+
+    header .container {
+        width: 100%;
+        min-width: 375px;
+        max-width: 767px;
+        height: 56px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 389%;
+        font-weight: 700;
+        width: 82%;
+    }
+
+    .show {
+        display: none;
+    }
+
+    ul {
+        padding: 0;
+        text-align: left;
+    }
+
+    .menu .menu-link li {
+        display: list-item;
+        margin: 0;
+        padding-left: 71px;
+    }
+
+    .menu .menu-link a {
+        font-size: 16.9pt;
+        line-height: 43.32pt;
+    }
+
+    .menu-link a:after {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        padding-top: 13%;
+        z-index: 21;
+        /*transition: 1s;*/
+        transform: rotate(-90deg);
+    }
+
+    .burger-selected {
+        padding-left: 6%;
+        padding-top: 5%;
+        transform: rotate(0deg);
+        z-index: 21;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        width: 278px;
+        height: 133vh;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        background: #2D303A;
+        box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+        padding-left: 150px;
+    }
+
+    .logo-mobile {
+        padding-top: 4%;
+        padding-left: 19%;
+    }
+
+    .logo h1 {
+        font-size: 15pt;
+    }
+
+    .slider,
+    .slides,
+    .slides img {
+        width: 100%;
+        height: 100%;
+        min-width: 375px;
+        max-width: 767px;
+        max-height: 451px;
+        min-height: 221px;
+    }
+
+    .slider {
+        margin-top: 61px;
+    }
+
+    .slider .arrow-left {
+        top: 43%;
+        left: 3%;
+    }
+
+    .slider .arrow-right {
+        right: 3%;
+        top: 43%;
+    }
+
+    .btn-horizontal {
+        top: 96px;
+        left: 157px;
+        width: 17px;
+        height: 17px;
+    }
+
+    .btn-vertical {
+        top: 170px;
+        left: 71px;
+        width: 17px;
+        height: 17px;
+    }
+
+    .black {
+        top: 44px;
+        left: 46px;
+        height: 124px;
+        width: 69px;
+    }
+
+    .black1 {
+        top: 70px;
+        right: 74px;
+        height: 70px;
+        width: 124px;
+    }
+
+    .services {
+        padding-right: 37px;
+        padding-left: 32px;
+    }
+
+    .services .services-info h2 {
+        letter-spacing: -0.4pt;
+        font-size: 23pt;
+        padding-bottom: 25px;;
+        padding-top: 33px;
+    }
+
+    .services .services-info p {
+        padding-bottom: 0;
+    }
+
+    .advantages {
+        display: flex;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .portfolio h2 {
+        padding-top: 45px;
+    }
+
+    .services .services-info p {
+        font-size: 13pt;
+        line-height: 22pt;
+        letter-spacing: -0.01pt;
+        padding-bottom: 31px;
+    }
+
+    .advantages-info {
+        margin: 0;
+        padding: 0 0 0 21px;
+    }
+
+    .advantages-icon {
+        margin-top: 2px;
+    }
+
+    .advantages-line {
+        margin-bottom: 0;
+    }
+
+    .portfolio {
+        padding: 0 0 0 32px;
+    }
+
+    .portfolio p {
+        width: 305px;
+        padding-bottom: 16px;
+    }
+
+    button {
+        margin: 0 5px 25px 0;
+    }
+
+    .gallery {
+        padding-bottom: 21px;
+    }
+
+    .gallery img {
+        margin-right: 12px;
+        margin-bottom: 14px;
+        width: 151px;
+        height: 128px
+    }
+
+    .gallery img:nth-child(n + 9) {
+        display: none;
+    }
+
+    .about {
+        padding: 43px 0 6px 30px;
+    }
+
+    .about>p {
+        font-size: 20px;
+        padding-bottom: 25px;
+    }
+
+    .person>img{
+        width: 314px;
+        height: 314px;
+    }
+
+    .person-info h3 {
+        padding-bottom: 4px;
+    }
+
+    .layout-3-column {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .layout-3-column .social-media {
+        padding: 12px 0 30px 0;
+    }
+
+    .person {
+        width: 100%;
+    }
+
+    .second-person {
+        left: 0;
+    }
+
+    .last-person {
+        left: 0;
+    }
+
+    .quote h2 {
+        padding: 50px 0 25px 31px;
+    }
+
+    .quote p {
+        width: 327px;
+        font-size: 15pt;
+        padding: 0 0 17px 30px;
+    }
+
+    input, textarea {
+        width: 314px;
+        border-radius: 5px;
+        padding-left: 0;
+        margin: 0 0 13px 30px;
+    }
+
+    textarea {
+        height: 146px;
+    }
+
+    input[type=submit] {
+        width: 316px;
+        height: 48px;
+    }
+
+    .contact-information {
+        position: absolute;
+        margin-top: 405px;
+    }
+
+    .contact-information h4 {
+        padding: 0 0 3px 29px;
+    }
+
+    .contact-information img {
+        padding: 0 7px 0 30px;
+    }
+
+    .contact-information p {
+        font-size: 12px;
+        padding-bottom: 13px;
+    }
+
+    .quote {
+        height: 964px;
+    }
+
+    .modal {
+        left: 19%;
+        top: 50%;
+    }
+
+    .bg {
+        top: 0;
+        width: 375px;
+        height: 4967px;
+    }
+
+    .modal-content {
+        width: 209px;
+        max-height: 200px;
+    }
+
+    footer>p {
+        display: none;
+    }
+
+    footer .social-media {
+        margin-left: 105px;
+        margin-right: auto;
+    }
 }
