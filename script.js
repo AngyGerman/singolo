@@ -41,11 +41,11 @@ function changeSlide(direction) {
     setTimeout(() => {
         slidesNodes[currentSlideIndex].classList.remove('active');
         slidesNodes[currentSlideIndex].classList.remove('animation');
-    }, 10);
+    }, 1);
 
     setTimeout(() => {
         slidesNodes[nextSlideIndex].classList.add('visible');
-    }, 150);
+    }, 1);
 }
 
 previousSlideArrow.addEventListener('click', (e) => {

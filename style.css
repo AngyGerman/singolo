@@ -192,6 +192,10 @@ ul {
     left: 42px;
 }
 
+.slider .sl2{
+    border-bottom: 4px solid #647AD0;
+}
+
 .slider .arrow-right {
     right: 40px;
     top: 281px;
@@ -213,6 +217,7 @@ ul {
 }
 
 .slider .slides img {
+    position: relative;
     display: none;
     opacity: 0;
     left: 100px;
@@ -220,6 +225,7 @@ ul {
 }
 
 .slider .slides img.active {
+    position: absolute;
     display: block;
 }
 
@@ -230,6 +236,8 @@ ul {
 }
 
 .slider .slides img.animation {
+    position: relative;
+    display: block;
     left: -100px;
 }
 
@@ -1100,7 +1108,7 @@ footer img:last-child {
     input, textarea {
         width: 314px;
         border-radius: 5px;
-        padding-left: 0;
+        padding-left: 7px;
         margin: 0 0 13px 30px;
     }
 
